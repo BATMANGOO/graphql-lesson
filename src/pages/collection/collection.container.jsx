@@ -20,6 +20,8 @@ const GET_COLLECTION_BY_TITLE = gql`
   }
 `;
 
+console.log(GET_COLLECTION_BY_TITLE);
+
 const CollectionPageContainer = ({ match }) => (
   <Query query={GET_COLLECTION_BY_TITLE} variables={{ title: match.params.collectionId }}>
     {
@@ -30,5 +32,6 @@ const CollectionPageContainer = ({ match }) => (
     }
   </Query>
 );
+
 
 export default CollectionPageContainer;
